@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>TECH BYTES</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="homepage.css">
+</head>
+<body style="background-color: rgb(0,0,0)">  <!-- 7,38,66-->
+<nav class="navbar navbar-dark bg-dark" style="padding-bottom: 0px;">
+  <a class="navbar-brand">
+    <p style="font-family:Comic Sans MS, cursive, sans-serif  ;color:whitesmoke;font-size: 30px;">
+
+    <img id="rcorners2" src="tech_bytes.jpeg" width="70" height="50" class="d-inline-block align-top" alt="logo">
+      Tech Bytes</p>
+  </a>
+  <form class="form-inline" action="/search" target="_blank" method="GET">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" name="search">
+    <button type="submit" class="btn btn-danger" value="search">Search</button>
+
+    <!--input type="text" name="search">
+    <input type="submit" value="search"-->
+    <!--button type="button" class="btn btn-info">Info</button-->
+    <!--button type="button" class="btn btn-secondary">Secondary</button-->
+    <!--button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button-->
+  </form>
+
+</nav>
+  
+  <div class="jumbotron jumbotron-fluid" style="padding-bottom: 0px;padding-top: 0px;line-height: 0"  >
+  <div class="container-fluid" style="padding-left: 0px;padding-right: 0px" >
+    <div class="row">
+    <div >
+
+
+
+  </div>
+</div>
+</div>
+  </div>
+  </div>
+  <h1 style="text-align: center;color: white" >SEARCH RESULTS</h1>
+ 
+  <% for(var i=0;i<arr[0].articles.length;i++){%>
+  <img id="pic"src=<%=arr[0].articles[i].urlToImage%>><br>
+   <div style="color: white" id="cent">
+  <strong style="color:gold">Author:</strong> <%=arr[0].articles[i].author%> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<strong style="color:gold">Published on:</strong><%=arr[0].articles[i].publishedAt%><br>
+  <%=arr[0].articles[i].title%><br>
+  <%=arr[0].articles[i].description%><br>
+  <a href=<%=arr[0].articles[i].url%> target="_blank">Read More...</a><br>
+  
+
+</div>
+<%}%>
+
+</div>
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
