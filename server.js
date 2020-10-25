@@ -1,5 +1,5 @@
 const NewsAPI = require('newsapi');
-const newsapi = new NewsAPI('3706d5cc76c8405887f722ea6fd0140f');
+const newsapi = new NewsAPI('Enter-your-api-key-here!');
 var express = require('express');
 var bodyparser=require('body-parser');
 //app.use(bodyparser.urlencoded({extended:false}))
